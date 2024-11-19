@@ -21,9 +21,11 @@ public class AppConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**").allowedOrigins("http://localhost:5173")
-                        .allowedOrigins("https://the4th-wall-admin.vercel.app")
-                        .allowedHeaders("http://localhost:5173", "https://the4th-wall-admin.vercel.app");
+                registry.addMapping("/api/**")
+                        .allowedOrigins("http://localhost:5173","https://the4th-wall-admin.vercel.app")
+                        .allowedMethods("GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS")
+                        .allowedHeaders("*")
+                        .allowCredentials(true);
             }
         };
     }
