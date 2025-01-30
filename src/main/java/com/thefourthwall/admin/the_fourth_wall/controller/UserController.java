@@ -33,6 +33,7 @@ public class UserController {
 
     @GetMapping("/")
     public List<UserResponse> users(){
+        System.out.println("Below are users of the fourth wall");
         return List.of(new UserResponse(UUID.randomUUID().toString(), String.valueOf(System.currentTimeMillis()), String.valueOf(System.currentTimeMillis()), "Hetvi", "hetvi@test.com", "ADMIN", ""));
     }
 }
