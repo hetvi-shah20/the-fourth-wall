@@ -1,6 +1,9 @@
-package com.thefourthwall.admin.the_fourth_wall.entities;
+package com.thefourthwall.admin.the_fourth_wall.entity;
 
-public class Users {
+import lombok.Data;
+
+@Data
+public class User {
 
     public String id;
     public String created_at;
